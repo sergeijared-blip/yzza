@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You, Gorgeous ♡</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff9d9;
+            color: #5b4a20;
+            font-family: Georgia, 'Times New Roman', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(201, 166, 61, 0.3);
+            font-size: 25px;
+            animation: floating 10s linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(3) {
+            left: 40%;
+            animation-delay: 5s;
+        }
+
+        .heart:nth-child(4) {
+            left: 65%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(5) {
+            left: 85%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .letter {
+            width: 100%;
+            max-width: 850px;
+            background: rgba(255, 253, 235, 0.95);
+            padding: 60px;
+            border-radius: 25px;
+            border: 1px solid rgba(190, 155, 50, 0.3);
+            box-shadow:
+                0 20px 70px rgba(130, 100, 20, 0.15);
+            animation: letterAppear 1.3s ease;
+        }
+
+        @keyframes letterAppear {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .top .date {
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            color: #a78b32;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 45px;
+            font-weight: normal;
+            color: #67531d;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #9a8549;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: #c8aa4c;
+            margin: 25px auto;
+        }
+
+        .letter p {
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+            text-align: justify;
+            color: #62542d;
+        }
+
+        .italian {
+            font-style: italic;
+            color: #6b5720 !important;
+            background: rgba(247, 232, 163, 0.25);
+            padding: 25px;
+            border-left: 3px solid #c8aa4c;
+            border-radius: 10px;
+        }
+
+        .closing {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(190, 155, 50, 0.25);
+        }
+
+        .closing .love {
+            font-size: 25px;
+            color: #8c7125;
+            margin-bottom: 10px;
+        }
+
+        .closing p {
+            text-align: center;
+            margin: 0;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            color: #9a8549;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            padding: 11px 25px;
+            border: 1px solid #cdb55d;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #796426;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #e6d37e;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+
+            .wrapper {
+                padding: 25px 12px;
+            }
+
+            .letter {
+                padding: 35px 23px;
+                border-radius: 18px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .letter p {
+                font-size: 15px;
+                line-height: 1.8;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+    </div>
+
+    <main class="wrapper">
+
+        <article class="letter">
+
+            <header class="top">
+
+                <div> October 1, 2026</div>
+
+                <h1>For You, Gorgeous ♡</h1>
+
+                <div class="subtitle">
+                    A letter explaining how much I adore you
+                </div>
+
+                <div class="divider"></div>
+
+            </header>
+
+
+            <p>
+                Oh hey there, gorgeous. It’s October 1, the day where guys are
+                flexing their girls, and here I am, instead of just posting you,
+                writing you a whole letter. I could literally post your pictures
+                and say a thousand things about you, but honestly, I feel like
+                words hit different when they come straight from the heart.
+                Thank you for staying with me, especially during those moments
+                na ang hirap kong intindihin and even I don’t know how to explain
+                myself properly. Thank you for being patient with me, for
+                understanding my moods, my silence, and even the parts of me na
+                medyo complicated. Another month with you again, and honestly,
+                I still feel so lucky na I get to have someone like you in my life.
+            </p>
+
+
+            <p>
+                I seriously cannot explain how much I adore you. Like, it’s not
+                just because you’re pretty or because you have the kind of smile
+                that literally makes everything feel lighter. It’s the way you
+                laugh, the way your eyes look, your hair, the way you talk, the
+                little things you do without even realizing them—everything about
+                you just makes me soft. Napaka-ganda mo, sobra. If you could only
+                see yourself through my eyes, grabe, you would understand why I
+                sometimes just stare at you and think, “How did I get this lucky?”
+                You’re beautiful inside and out, and what makes you even more
+                beautiful is the heart behind that face. You have this kind of
+                beauty na hindi lang nakikita, but something that you genuinely feel.
+            </p>
+
+
+            <p>
+                Thank you for trusting me with the things you don't usually tell
+                everyone. I know trust isn't something na basta-basta binibigay,
+                kaya I genuinely appreciate every little thing you choose to share
+                with me. Your stories, your worries, your random thoughts, your
+                fears, even the things you think are too small to matter—I care
+                about all of them because they’re a part of you. And I promise,
+                I’ll treasure that trust instead of taking it for granted. I might
+                not always know exactly what to say, and sometimes baka sablay pa
+                yung advice ko, but I’ll always try to listen first, understand you
+                properly, and be there without making you feel like you have to
+                explain yourself a hundred times.
+            </p>
+
+
+            <p>
+                I’m genuinely so proud of you, and I hope you know that. I know
+                there are days na you feel tired, lost, or parang you're not doing
+                enough, but please don't be too hard on yourself. You’re doing
+                better than you think. I’m proud of you not because you have
+                everything figured out, but because kahit ang daming things na
+                dumadaan sa buhay mo, you still keep going. You keep trying, you
+                keep learning, and you keep becoming someone stronger. And honestly,
+                everything in this world may be high-priced, but my love for you
+                is definitely higher. No amount of money, gifts, or expensive
+                things could ever compare to how much I value you and how grateful
+                I am that you’re part of my life.
+            </p>
+
+
+            <p>
+                And you know what? I don't expect our relationship to be perfect
+                all the time. We’re both human, and obviously, we’ll have our
+                moments. May times na magkaka-misunderstanding tayo, may times na
+                magiging emotional tayo, and may moments na we won't immediately
+                understand each other. But I hope we never let one bad moment make
+                us forget all the good ones. I want us to learn how to talk things
+                out instead of giving up, to understand instead of assuming, and
+                to choose patience kahit minsan mahirap. I don't want something
+                that only feels good when everything is perfect. I want something
+                real enough to stay meaningful even during the messy parts. Because
+                for me, love isn't just about butterflies and sweet words; it's also
+                about choosing to understand each other when things aren't as easy
+                as they used to be.
+            </p>
+
+
+            <p class="italian">
+                Amore mio, voglio che tu sappia quanto sei importante per me.
+                Non sei semplicemente una persona che amo; sei qualcuno che ha
+                lasciato una parte di sé nel mio cuore. Ti ringrazio per la pazienza,
+                per la fiducia e per tutti quei piccoli momenti che forse per te
+                sembrano semplici, ma che per me significano tantissimo. Non prometto
+                che sarò sempre perfetto, perché so di avere ancora molte cose da
+                imparare, ma prometto di continuare a scegliere te con sincerità,
+                rispetto e amore. Se un giorno ti sentirai insicura del tuo valore,
+                spero che tu possa ricordare che, ai miei occhi, sei molto più
+                preziosa di quanto le parole possano descrivere. Ti amo non solo
+                per ciò che sei quando tutto va bene, ma anche per la persona che
+                sei nei giorni difficili. E finché la vita ci permetterà di condividere
+                questi momenti, voglio continuare a creare ricordi con te, un giorno
+                alla volta.
+            </p>
+
+
+            <p>
+                And honestly, I don't just love the big moments with you. I love
+                the random little things too. Yung random conversations natin na
+                wala namang point pero somehow, ang saya pa rin. Yung mga jokes na
+                tayo lang nakakagets, yung random updates mo, yung simpleng “tumatae
+                ako” or “kumakain ako,” hahahaha and even those moments na wala
+                tayong masyadong sinasabi but somehow, comfortable pa rin. Those
+                little things mean so much to me because they make me realize na
+                love doesn't always have to be grand. Sometimes, love is just being
+                there, checking on each other, remembering the small details, and
+                making each other feel appreciated. I want to keep knowing you
+                deeper—not just the version of you that everyone sees, but also
+                the quiet version of you that only comes out when you feel safe.
+            </p>
+
+
+            <p>
+                And lastly, I want you to know na I’m not here just for the good
+                days. I’m here for the ordinary days, the confusing days, the
+                stressful days, and even those days na you don't feel like yourself.
+                I don't want to be someone who only loves you when you're happy and
+                easy to understand. I want to appreciate you as a whole person,
+                with all your moods, dreams, flaws, fears, and little imperfections.
+                I want to see you grow, chase your dreams, become the person you want
+                to be, and be genuinely happy with the life you're building. And if
+                I can be one of the people who makes that journey a little lighter
+                for you, then honestly, that already means a lot to me. You don't
+                have to be perfect for me to appreciate you. You just have to be you.
+            </p>
+
+
+            <p>
+                So, happy October 1, gorgeous. Another month, another chapter,
+                and another reason for me to be thankful that you exist in my life.
+                I know I may not always have the perfect words, the biggest surprises,
+                or the most expensive gifts, but I hope you can always feel the
+                sincerity behind everything I do. If I could give you anything,
+                I’d honestly give you the ability to see yourself the way I see you,
+                because maybe then you’d finally understand why I think you’re so
+                damn beautiful. You’re precious to me in ways I probably can’t fully
+                explain, and I hope I never make you question that. Thank you for
+                staying, for understanding me, for trusting me, and for letting me
+                be a part of your life. I don't know exactly what the future holds
+                for us, but for now, I’m just genuinely grateful that I get to
+                experience another month with you. And since it’s October 1, let me
+                proudly say it: out of everyone I could write a letter for today,
+                I’m choosing you. Always you.
+            </p>
+
+
+            <div class="closing">
+                <div class="love">Always you. ♡</div>
+                <p>Written with love, sincerity, and a little bit of cheesiness.</p>
+            </div>
+
+
+            <a href="index.html" class="back">
+                ← Go back
+            </a>
+
+        </article>
+
+    </main>
+
+
+    <script>
+
+        // Display the current date
+        const date = new Date();
+
+        const options = {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        };
+
+        document.getElementById("letterDate").textContent =
+            date.toLocaleDateString("en-US", options);
+
+
+        // Get the name entered on the first page
+        const savedName = localStorage.getItem("visitorName");
+
+        if (savedName) {
+            document.querySelector("h1").textContent =
+                "For You, " + savedName + " ♡";
+        }
+
+    </script>
+
+</body>
+</html>

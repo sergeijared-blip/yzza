@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter For You ♡</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #fff9d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #5b4a20;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(214, 174, 54, 0.35);
+            font-size: 22px;
+            animation: float 8s linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 45%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 70%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+            padding: 50px 35px;
+            background: rgba(255, 253, 231, 0.88);
+            border: 1px solid rgba(190, 155, 50, 0.35);
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(130, 100, 20, 0.15);
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .small-text {
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #a78b32;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: normal;
+            color: #69551e;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #897331;
+        }
+
+        .message {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #776536;
+            margin-bottom: 28px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d8c477;
+            border-radius: 12px;
+            outline: none;
+            background: #fffdf0;
+            color: #5b4a20;
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        input:focus {
+            border-color: #b99a38;
+            box-shadow: 0 0 12px rgba(185, 154, 56, 0.2);
+        }
+
+        button {
+            border: none;
+            padding: 14px 38px;
+            border-radius: 30px;
+            background: #d8bd55;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-family: Georgia, serif;
+        }
+
+        button:hover {
+            background: #b99b36;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(130, 100, 20, 0.2);
+        }
+
+        .hint {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #a49361;
+            font-family: Arial, sans-serif;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.8s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .container {
+                padding: 40px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+        <div class="heart">♡</div>
+    </div>
+
+    <div class="container" id="page">
+
+        <div class="small-text">A little something for you</div>
+
+        <h1>Hello, Gorgeous</h1>
+
+      <p>October 1, 2026</p>
+      
+      <br>
+      
+        <p class="message">
+            Before you enter, leave your name here.
+            This little page was made especially for you.
+        </p>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name..."
+            autocomplete="off"
+        >
+
+        <br>
+
+        <button onclick="enterLetter()">
+            Enter 
+        </button>
+
+        <div class="hint">
+            Press Enter on your keyboard or click the button
+        </div>
+
+    </div>
+
+    <script>
+        // Automatically display today's date
+        const today = new Date();
+
+        const options = {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        };
+
+        document.getElementById("today").textContent =
+            today.toLocaleDateString("en-US", options);
+
+
+        // Enter the letter
+        function enterLetter() {
+
+            const name = document.getElementById("name").value.trim();
+            const page = document.getElementById("page");
+
+            if (name === "") {
+                document.getElementById("name").style.borderColor = "#c9a63c";
+                document.getElementById("name").placeholder =
+                    "Please enter your name ♡";
+                return;
+            }
+
+            // Save the name for the next page
+            localStorage.setItem("visitorName", name);
+
+            page.classList.add("fade-out");
+
+            setTimeout(() => {
+                window.location.href = "about.html";
+            }, 800);
+        }
+
+
+        // Allow Enter key to continue
+        document.getElementById("name").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                enterLetter();
+            }
+        });
+    </script>
+
+</body>
+</html>
